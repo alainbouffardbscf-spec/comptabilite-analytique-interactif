@@ -1,0 +1,530 @@
+{
+  "Meta": {
+    "Chapitre": 5,
+    "ExerciceID": "P5.12",
+    "Titre": "Jos Allaire Inc.",
+    "Numero": "5.12",
+    "Cours": "410-409-BA",
+    "FinExercice": "1900-12-31",
+    "TauxImputation": 2.2,
+    "BaseImputation": "Heures MOD"
+  },
+  "Affichage": {
+    "ComptesT": [1180, 1181, 1182, 1300, 2100, 2350, 3400, 4500, 5000, 5007, 9640, 9645]
+  },
+  "Ouverture": [
+    {
+      "Date": "2022-06-30",
+      "CompteID": 1180,
+      "Debit": 70000,
+      "Credit": 0
+    },
+    {
+      "Date": "2022-06-30",
+      "CompteID": 1181,
+      "Debit": 50000,
+      "Credit": 0
+    },
+    {
+      "Date": "2022-06-30",
+      "CompteID": 1182,
+      "Debit": 100000,
+      "Credit": 0
+    },
+    {
+      "Date": "2022-06-30",
+      "CompteID": 1300,
+      "Debit": 100000,
+      "Credit": 0
+    },
+    {
+      "Date": "2022-06-30",
+      "CompteID": 3400,
+      "Debit": 0,
+      "Credit": 320000
+    }
+  ],
+  "Ecritures": [
+    {
+      "IDEcriture": "E0001",
+      "Date": "2022-07-01",
+      "Libelle": "Achèvement de produits",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1182,
+          "Debit": 30000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1181,
+          "Debit": 0,
+          "Credit": 30000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0002",
+      "Date": "2022-07-05",
+      "Libelle": "Mise en production de MP directes",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1181,
+          "Debit": 40000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1180,
+          "Debit": 0,
+          "Credit": 40000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0003",
+      "Date": "2022-07-10",
+      "Libelle": "Achat de MP à crédit",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1180,
+          "Debit": 25000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 2100,
+          "Debit": 0,
+          "Credit": 25000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0004",
+      "Date": "2022-07-15",
+      "Libelle": "MOD engagée du 1er au 15 juillet",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1181,
+          "Debit": 65000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 2350,
+          "Debit": 0,
+          "Credit": 65000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0005",
+      "Date": "2022-07-15",
+      "Libelle": "Imputation des FGF",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1181,
+          "Debit": 28600,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 9640,
+          "Debit": 0,
+          "Credit": 28600
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0006",
+      "Date": "2022-07-15",
+      "Libelle": "Matières indirectes utilisées",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9645,
+          "Debit": 6000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1180,
+          "Debit": 0,
+          "Credit": 6000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0007",
+      "Date": "2022-07-15",
+      "Libelle": "MOI engagée du 1er au 15 juillet",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9645,
+          "Debit": 12000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 2350,
+          "Debit": 0,
+          "Credit": 12000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0008",
+      "Date": "2022-07-20",
+      "Libelle": "Vente à crédit",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1100,
+          "Debit": 110000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 4500,
+          "Debit": 0,
+          "Credit": 110000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0009",
+      "Date": "2022-07-20",
+      "Libelle": "Coût des produits vendus",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 5000,
+          "Debit": 85000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1182,
+          "Debit": 0,
+          "Credit": 85000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0010",
+      "Date": "2022-07-20",
+      "Libelle": "Versement des salaires à payer au 15 juillet",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 2350,
+          "Debit": 77000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1010,
+          "Debit": 0,
+          "Credit": 77000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0011",
+      "Date": "2022-07-20",
+      "Libelle": "Paiement des MP achetées le 10 juillet",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 2100,
+          "Debit": 25000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1010,
+          "Debit": 0,
+          "Credit": 25000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0012",
+      "Date": "2022-07-25",
+      "Libelle": "Achèvement de produits",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1182,
+          "Debit": 170000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1181,
+          "Debit": 0,
+          "Credit": 170000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0013",
+      "Date": "2022-07-27",
+      "Libelle": "Achat de MP à crédit",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1180,
+          "Debit": 35000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 2100,
+          "Debit": 0,
+          "Credit": 35000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0014",
+      "Date": "2022-07-29",
+      "Libelle": "Mise en production de MP directes",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1181,
+          "Debit": 50000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1180,
+          "Debit": 0,
+          "Credit": 50000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0015",
+      "Date": "2022-07-30",
+      "Libelle": "Encaissement de la vente du 20 juillet",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1010,
+          "Debit": 110000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1100,
+          "Debit": 0,
+          "Credit": 110000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0016",
+      "Date": "2022-07-30",
+      "Libelle": "Vente à crédit",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1100,
+          "Debit": 200000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 4500,
+          "Debit": 0,
+          "Credit": 200000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0017",
+      "Date": "2022-07-30",
+      "Libelle": "Coût des produits vendus",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 5000,
+          "Debit": 140000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1182,
+          "Debit": 0,
+          "Credit": 140000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0018",
+      "Date": "2022-07-30",
+      "Libelle": "MOD engagée du 16 au 31 juillet",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1181,
+          "Debit": 50000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 2350,
+          "Debit": 0,
+          "Credit": 50000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0019",
+      "Date": "2022-07-31",
+      "Libelle": "Imputation des FGF",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1181,
+          "Debit": 22000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 9640,
+          "Debit": 0,
+          "Credit": 22000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0020",
+      "Date": "2022-07-31",
+      "Libelle": "Matières indirectes utilisées",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9645,
+          "Debit": 4000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1180,
+          "Debit": 0,
+          "Credit": 4000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0021",
+      "Date": "2022-07-31",
+      "Libelle": "MOI engagée du 16 au 31 juillet",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9645,
+          "Debit": 8000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 2350,
+          "Debit": 0,
+          "Credit": 8000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0022",
+      "Date": "2022-07-31",
+      "Libelle": "Facture d’électricité de l’usine",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9645,
+          "Debit": 5000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 2100,
+          "Debit": 0,
+          "Credit": 5000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0023",
+      "Date": "2022-07-31",
+      "Libelle": "Assurance – usine",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9645,
+          "Debit": 10000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 2100,
+          "Debit": 0,
+          "Credit": 10000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0024",
+      "Date": "2022-07-31",
+      "Libelle": "Amortissement – usine et équipement",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9645,
+          "Debit": 6000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1305,
+          "Debit": 0,
+          "Credit": 6000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0025",
+      "Date": "2022-07-31",
+      "Libelle": "Fermeture des FGF et constatation de la sous-imputation",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9640,
+          "Debit": 50600,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 5007,
+          "Debit": 400,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 3,
+          "CompteID": 9645,
+          "Debit": 0,
+          "Credit": 51000
+        }
+      ]
+    }
+  ]
+}

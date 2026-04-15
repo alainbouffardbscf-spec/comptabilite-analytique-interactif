@@ -1,0 +1,371 @@
+{
+  "Meta": {
+    "Chapitre": 5,
+    "ExerciceID": "P5.10",
+    "Titre": "Télémac ltée",
+    "Numero": "5.10",
+    "Cours": "410-409-BA",
+    "FinExercice": "1900-12-31",
+    "TauxImputation": 0.8,
+    "BaseImputation": "Coût de la MOD"
+  },
+  "Affichage": {
+    "ComptesT": [1180, 1181, 1182, 1300, 2100, 2350, 3400, 4500, 5000, 5007, 9640, 9645]
+  },
+  "Ouverture": [
+    {
+      "Date": "2021-11-30",
+      "CompteID": 1180,
+      "Debit": 25000,
+      "Credit": 0
+    },
+    {
+      "Date": "2021-11-30",
+      "CompteID": 1181,
+      "Debit": 30000,
+      "Credit": 0
+    },
+    {
+      "Date": "2021-11-30",
+      "CompteID": 1182,
+      "Debit": 45000,
+      "Credit": 0
+    },
+    {
+      "Date": "2021-11-30",
+      "CompteID": 1300,
+      "Debit": 100000,
+      "Credit": 0
+    },
+    {
+      "Date": "2021-11-30",
+      "CompteID": 3400,
+      "Debit": 0,
+      "Credit": 200000
+    }
+  ],
+  "Ecritures": [
+    {
+      "IDEcriture": "E0001",
+      "Date": "2021-12-31",
+      "Libelle": "Achat de MP à crédit",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1180,
+          "Debit": 80000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 2100,
+          "Debit": 0.0,
+          "Credit": 80000.0
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0002",
+      "Date": "2021-12-31",
+      "Libelle": "Transfert de MP directes vers SPC",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1181,
+          "Debit": 85000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1180,
+          "Debit": 0.0,
+          "Credit": 85000.0
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0003",
+      "Date": "2021-12-31",
+      "Libelle": "Utilisation de matières premières indirectes",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9645,
+          "Debit": 5000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1180,
+          "Debit": 0.0,
+          "Credit": 5000.0
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0004",
+      "Date": "2021-12-31",
+      "Libelle": "Constatation de la MOD",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1181,
+          "Debit": 120000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 2350,
+          "Debit": 0.0,
+          "Credit": 120000.0
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0005",
+      "Date": "2021-12-31",
+      "Libelle": "Constatation de la MOI",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9645,
+          "Debit": 30000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 2350,
+          "Debit": 0.0,
+          "Credit": 30000.0
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0006",
+      "Date": "2021-12-31",
+      "Libelle": "FGF réels — électricité",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9645,
+          "Debit": 12000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1010,
+          "Debit": 0.0,
+          "Credit": 12000.0
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0007",
+      "Date": "2021-12-31",
+      "Libelle": "FGF réels — amortissement",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9645,
+          "Debit": 25000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1305,
+          "Debit": 0.0,
+          "Credit": 25000.0
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0008",
+      "Date": "2021-12-31",
+      "Libelle": "FGF réels — assurances",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9645,
+          "Debit": 2000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1010,
+          "Debit": 0.0,
+          "Credit": 2000.0
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0009",
+      "Date": "2021-12-31",
+      "Libelle": "FGF réels — autres",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9645,
+          "Debit": 16000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 2100,
+          "Debit": 0.0,
+          "Credit": 16000.0
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0010",
+      "Date": "2021-12-31",
+      "Libelle": "Imputation des FGF à la production",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1181,
+          "Debit": 96000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 9640,
+          "Debit": 0.0,
+          "Credit": 96000.0
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0011",
+      "Date": "2021-12-31",
+      "Libelle": "Transfert SPC vers SPF — achèvement",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1182,
+          "Debit": 310000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1181,
+          "Debit": 0.0,
+          "Credit": 310000.0
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0012",
+      "Date": "2021-12-31",
+      "Libelle": "Vente de produits finis",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1100,
+          "Debit": 385000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 4500,
+          "Debit": 0.0,
+          "Credit": 385000.0
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0013",
+      "Date": "2021-12-31",
+      "Libelle": "Constatation du coût des produits vendus",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 5000,
+          "Debit": 300000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1182,
+          "Debit": 0.0,
+          "Credit": 300000.0
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0014",
+      "Date": "2021-12-31",
+      "Libelle": "Constatation de la surimputation / fermeture FGF vers SSI",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9640,
+          "Debit": 96000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 9645,
+          "Debit": 0.0,
+          "Credit": 90000.0
+        },
+        {
+          "NoLigne": 3,
+          "CompteID": 5007,
+          "Debit": 0.0,
+          "Credit": 6000.0
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0015",
+      "Date": "2021-12-31",
+      "Libelle": "Fermeture SSI — non importante vers CPV",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 5007,
+          "Debit": 6000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 5000,
+          "Debit": 0.0,
+          "Credit": 6000.0
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0016",
+      "Date": "2021-12-31",
+      "Libelle": "Fermeture SSI importante",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 5007,
+          "Debit": 6000.0,
+          "Credit": 0.0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 5000,
+          "Debit": 0.0,
+          "Credit": 4786.8
+        },
+        {
+          "NoLigne": 3,
+          "CompteID": 1181,
+          "Debit": 0.0,
+          "Credit": 335.4
+        },
+        {
+          "NoLigne": 4,
+          "CompteID": 1182,
+          "Debit": 0.0,
+          "Credit": 877.8
+        }
+      ]
+    }
+  ]
+}

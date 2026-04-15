@@ -1,0 +1,184 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 24px;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+.entete {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.entete h1 {
+  margin: 0 0 8px 0;
+}
+
+.entete p {
+  margin: 0;
+}
+
+.application {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 20px;
+  align-items: start;
+}
+
+.bloc {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 0;
+  border-bottom: 2px solid #333;
+  padding-bottom: 6px;
+}
+
+.boutons,
+.boutons-vues {
+  margin-bottom: 12px;
+}
+
+button {
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.btn-vue.active {
+  font-weight: bold;
+  border: 2px solid #333;
+  background-color: #e9e9e9;
+}
+
+#liste-ecritures label.ligne-ecriture {
+  display: grid;
+  grid-template-columns: 24px 70px 100px 1fr;
+  column-gap: 8px;
+  align-items: start;
+  margin-bottom: 6px;
+}
+
+#liste-ecritures input {
+  margin-top: 2px;
+}
+
+.id-ecriture,
+.date-ecriture {
+  white-space: nowrap;
+}
+
+.libelle-ecriture {
+  line-height: 1.3;
+}
+
+.vue {
+  display: none;
+}
+
+.vue.active {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 12px;
+  background-color: white;
+  min-width: 520px;
+}
+
+th,
+td {
+  border: 1px solid #bbb;
+  padding: 6px 10px;
+}
+
+th {
+  background-color: #e9e9e9;
+}
+
+td:last-child,
+th:last-child {
+  text-align: right;
+}
+
+tfoot th {
+  background-color: #dcdcdc;
+}
+
+.bilan-deux-colonnes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.bilan-deux-colonnes table {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Comptes en T */
+
+.compte-t {
+  margin-bottom: 24px;
+}
+
+.compte-t h3 {
+  margin-bottom: 8px;
+}
+
+.table-compte-t {
+  width: 100%;
+  min-width: 0;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.table-compte-t th,
+.table-compte-t td {
+  border: none;
+  padding: 6px 10px;
+  background-color: white;
+}
+
+.table-compte-t thead th {
+  background-color: white;
+  border-bottom: 2px solid black;
+}
+
+.table-compte-t tfoot th,
+.table-compte-t tfoot td {
+  background-color: white;
+}
+
+.table-compte-t th:nth-child(4),
+.table-compte-t td:nth-child(4) {
+  border-right: 2px solid black;
+}
+
+.table-compte-t tfoot th:first-child {
+  text-align: right;
+}
+
+.table-compte-t tfoot tr:first-child th:nth-child(2),
+.table-compte-t tfoot tr:first-child th:nth-child(3) {
+  border-top: 2px solid black;
+}
+
+@media (max-width: 1000px) {
+  .application {
+    grid-template-columns: 1fr;
+  }
+
+  .bilan-deux-colonnes {
+    grid-template-columns: 1fr;
+  }
+}
