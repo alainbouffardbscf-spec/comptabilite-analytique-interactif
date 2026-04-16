@@ -8,14 +8,26 @@
 
 <body>
   <header class="entete">
-    <h1>Exercices - Comptabilité analytique de gestion</h1>
-    <p>Les résultats affichés reflètent les écritures cochées et les soldes d'ouverture.</p>
+    <div class="entete-haut">
+      <div>
+        <h1>Exercices - Comptabilité analytique de gestion</h1>
+        <p>Les résultats affichés reflètent les écritures cochées et les soldes d'ouverture.</p>
+      </div>
+
+      <div class="entete-actions">
+        <button id="btn-aide" type="button">Aide</button>
+      </div>
+    </div>
 
     <div class="choix-exercice">
+      <label for="choix-chapitre">Choisir un chapitre :</label>
+      <select id="choix-chapitre">
+        <option value="">-- Sélectionner un chapitre --</option>
+      </select>
+
       <label for="choix-exercice">Choisir un exercice :</label>
-      <select id="choix-exercice">
-        <option value="Exercice 5_10.json">Exercice 5.10</option>
-        <option value="Exercice 5_12.json">Exercice 5.12</option>
+      <select id="choix-exercice" disabled>
+        <option value="">-- Sélectionner un exercice --</option>
       </select>
     </div>
   </header>
@@ -30,7 +42,9 @@
           <button id="btn-tout-decocher">Tout décocher</button>
         </div>
 
-        <div id="liste-ecritures"></div>
+        <div id="liste-ecritures">
+          <p>Veuillez choisir un chapitre, puis un exercice.</p>
+        </div>
       </div>
     </section>
 
@@ -39,18 +53,21 @@
         <h2>Affichage</h2>
 
         <div class="boutons-vues">
-          <button class="btn-vue" data-vue="detail">Écritures cochées</button>
+          <button class="btn-vue active" data-vue="detail">Écritures cochées</button>
           <button class="btn-vue" data-vue="ouverture">Soldes d'ouverture</button>
           <button class="btn-vue" data-vue="comptes-t">Comptes en T</button>
           <button class="btn-vue" data-vue="bv">BV</button>
           <button class="btn-vue" data-vue="bilan">Bilan</button>
           <button class="btn-vue" data-vue="resultats">ER</button>
           <button class="btn-vue" data-vue="cout-fabrication">ECF</button>
+          <button class="btn-vue" data-vue="fiches-fabrication">Fiches</button>
         </div>
 
-        <div id="vue-detail" class="vue">
+        <div id="vue-detail" class="vue active">
           <h2>Détail des écritures cochées</h2>
-          <div id="zone-detail-ecritures"></div>
+          <div id="zone-detail-ecritures">
+            <p>Veuillez choisir un chapitre, puis un exercice.</p>
+          </div>
         </div>
 
         <div id="vue-ouverture" class="vue">
@@ -82,9 +99,119 @@
           <h2>État du coût de fabrication</h2>
           <div id="zone-cout-fabrication"></div>
         </div>
+
+        <div id="vue-fiches-fabrication" class="vue">
+          <h2>Fiches de fabrication</h2>
+          <div id="zone-fiches-fabrication"></div>
+        </div>
       </div>
     </section>
   </main>
+
+  <!-- Fenêtre d'aide -->
+  <div id="modale-aide" class="modale-aide" aria-hidden="true">
+    <div class="modale-aide-fond" id="modale-aide-fond"></div>
+
+    <div class="modale-aide-contenu" role="dialog" aria-modal="true" aria-labelledby="titre-aide">
+      <div class="modale-aide-entete">
+        <h2 id="titre-aide">Aide</h2>
+        <button id="btn-fermer-aide" type="button" class="btn-fermer-aide" aria-label="Fermer l'aide">×</button>
+      </div>
+
+      <div class="modale-aide-corps">
+        <h3>À propos de cette application</h3>
+
+        <p>
+          Cette application a été conçue pour aider les étudiants en comptabilité analytique de gestion à mieux comprendre les exercices du cours 410-409-BA.
+          Elle permet non seulement de valider les réponses, mais aussi de visualiser en temps réel l’impact de chaque transaction sur les différents états comptables.
+        </p>
+
+        <p>
+          En cochant ou en décochant les écritures, l’étudiant peut observer immédiatement l’effet de chaque opération sur les comptes en T, la balance de vérification, le bilan et l’état des résultats.
+          Selon le chapitre, des états supplémentaires sont également disponibles, comme l’état du coût de fabrication au chapitre 5, ou les fiches de fabrication par commande au chapitre 6.
+        </p>
+
+        <h3>Comment utiliser l’application</h3>
+
+        <p>
+          Commencez par choisir un chapitre, puis sélectionnez l’exercice que vous souhaitez réviser.
+          Cochez les écritures une à une pour suivre leur effet progressif, ou utilisez le bouton <em>Tout cocher</em> pour afficher le résultat final.
+          Les boutons de navigation dans le panneau de droite permettent de basculer entre les différentes vues disponibles.
+        </p>
+
+        <h3>Conseils pédagogiques</h3>
+
+        <p>
+          Pour tirer le meilleur parti de l’application, tentez d’abord de résoudre l’exercice par vous-même avant de cocher les écritures.
+          Comparez ensuite vos résultats avec ceux affichés, et consultez les fiches de fabrication pour comprendre le détail des calculs.
+          Si une réponse diffère de la vôtre, décochez les écritures une à une pour identifier précisément l’étape où votre raisonnement diverge.
+        </p>
+
+        <h3>Fonctionnement général</h3>
+
+        <ol>
+          <li>Choisir un chapitre.</li>
+          <li>Choisir un exercice.</li>
+          <li>Cocher les écritures à appliquer.</li>
+          <li>Consulter les différentes vues disponibles.</li>
+        </ol>
+
+        <h3>Vues disponibles</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Vue</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Écritures cochées</td>
+              <td>Présente les écritures actuellement sélectionnées</td>
+            </tr>
+            <tr>
+              <td>Soldes d’ouverture</td>
+              <td>Montre les soldes de départ de l’exercice</td>
+            </tr>
+            <tr>
+              <td>Comptes en T</td>
+              <td>Visualise les mouvements par compte</td>
+            </tr>
+            <tr>
+              <td>BV</td>
+              <td>Affiche la balance de vérification</td>
+            </tr>
+            <tr>
+              <td>Bilan</td>
+              <td>Présente les postes du bilan calculés à partir des écritures cochées</td>
+            </tr>
+            <tr>
+              <td>ER</td>
+              <td>Présente l’état des résultats</td>
+            </tr>
+            <tr>
+              <td>ECF</td>
+              <td>Disponible pour certains exercices de fabrication continue</td>
+            </tr>
+            <tr>
+              <td>Fiches</td>
+              <td>Disponible pour les exercices du chapitre 6 — détail par commande et par atelier</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Points importants</h3>
+
+        <ul>
+          <li>Les montants affichés dépendent uniquement des écritures cochées.</li>
+          <li>Si aucune écriture n’est cochée, les états reflètent uniquement les soldes d’ouverture, lorsqu’ils existent dans l’exercice.</li>
+          <li>Les fiches de fabrication montrent comment les coûts sont ventilés par commande et par atelier.</li>
+          <li>La zone d’explications des fiches aide à comprendre l’origine des montants calculés.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

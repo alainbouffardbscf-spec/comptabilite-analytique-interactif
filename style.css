@@ -12,12 +12,39 @@ body {
   margin-bottom: 20px;
 }
 
+.entete-haut {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
 .entete h1 {
   margin: 0 0 8px 0;
 }
 
 .entete p {
-  margin: 0;
+  margin: 0 0 12px 0;
+}
+
+.entete-actions {
+  display: flex;
+  align-items: flex-start;
+}
+
+.choix-exercice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  align-items: center;
+}
+
+.choix-exercice label {
+  font-weight: bold;
+}
+
+.choix-exercice select {
+  padding: 6px 8px;
 }
 
 .application {
@@ -173,6 +200,199 @@ tfoot th {
   border-top: 2px solid black;
 }
 
+/* Fiches de fabrication */
+
+.fiche-fabrication {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 28px;
+}
+
+.fiche-titre {
+  margin: 0 0 6px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.fiche-commande {
+  margin: 0 0 12px 0;
+}
+
+.fiche-statut {
+  margin: 12px 0 16px 0;
+  font-weight: bold;
+}
+
+.table-fiche-fabrication,
+.table-fiche-sommaire {
+  width: 100%;
+  min-width: 0;
+  margin-top: 10px;
+}
+
+.table-fiche-fabrication th,
+.table-fiche-fabrication td,
+.table-fiche-sommaire th,
+.table-fiche-sommaire td {
+  border: 1px solid #999;
+  padding: 6px 10px;
+  background-color: white;
+}
+
+.table-fiche-fabrication thead th,
+.table-fiche-sommaire thead th {
+  background-color: #efefef;
+  text-align: center;
+}
+
+.fiche-ligne-label {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.fiche-montant {
+  text-align: right;
+}
+
+.fiche-total-atelier {
+  text-align: center;
+  font-weight: bold;
+}
+
+.fiche-bas {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) 1fr;
+  gap: 20px;
+  align-items: start;
+  margin-top: 14px;
+}
+
+.table-fiche-sommaire {
+  max-width: 420px;
+}
+
+.table-fiche-sommaire tbody td:first-child {
+  width: 65%;
+  text-align: left;
+}
+
+.table-fiche-sommaire tbody td:last-child {
+  text-align: right;
+}
+
+.fiche-explications {
+  border: 1px solid #999;
+  background-color: #f3f3f3;
+  padding: 12px 14px 12px 18px;
+  font-size: 14px;
+}
+
+.fiche-explications h4 {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 6px;
+}
+
+.fiche-explication-bloc {
+  margin-bottom: 14px;
+}
+
+.fiche-explication-bloc:last-child {
+  margin-bottom: 0;
+}
+
+.fiche-explication-bloc p {
+  margin: 4px 0;
+  line-height: 1.35;
+}
+
+.fiche-explication-bloc p:not(:first-child) {
+  padding-left: 12px;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* Modale d'aide */
+
+.modale-aide {
+  display: none;
+}
+
+.modale-aide.ouverte {
+  display: block;
+}
+
+.modale-aide-fond {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 999;
+}
+
+.modale-aide-contenu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: min(760px, calc(100vw - 40px));
+  max-height: calc(100vh - 60px);
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #999;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow: auto;
+}
+
+.modale-aide-entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid #ccc;
+  background-color: #f0f0f0;
+}
+
+.modale-aide-entete h2 {
+  margin: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.btn-fermer-aide {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1;
+  padding: 4px 10px;
+}
+
+.modale-aide-corps {
+  padding: 16px;
+  font-size: 15px;
+}
+
+.modale-aide-corps h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.modale-aide-corps table {
+  margin-bottom: 12px;
+}
+
+.modale-aide-corps ul,
+.modale-aide-corps ol {
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-left: 22px;
+}
+
+.modale-aide-corps li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
 @media (max-width: 1000px) {
   .application {
     grid-template-columns: 1fr;
@@ -180,5 +400,18 @@ tfoot th {
 
   .bilan-deux-colonnes {
     grid-template-columns: 1fr;
+  }
+
+  .fiche-bas {
+    grid-template-columns: 1fr;
+  }
+
+  .entete-haut {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .entete-actions {
+    align-self: flex-start;
   }
 }

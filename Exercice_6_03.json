@@ -1,0 +1,312 @@
+{
+  "Meta": {
+    "Chapitre": 6,
+    "ExerciceID": "P6.03",
+    "Titre": "Fatout Inc.",
+    "Numero": "6.3",
+    "Cours": "410-409-BA",
+    "FinExercice": "1900-12-31",
+    "TypeExercice": "prix-revient-commande"
+  },
+  "Configuration": {
+    "Ateliers": []
+  },
+  "Affichage": {
+    "ComptesT": [1100, 1180, 1181, 1182, 2100, 2350, 4500, 5000, 6200, 9640]
+  },
+  "Commandes": [
+    {
+      "CommandeID": "L1670",
+      "Libelle": "SPC – L1670",
+      "Statut": "vendue",
+      "DateReception": "2021-01-01",
+      "DateCompletion": "2021-12-31",
+      "PrixVente": 18000
+    },
+    {
+      "CommandeID": "J1901",
+      "Libelle": "SPC – J1901",
+      "Statut": "vendue",
+      "DateReception": "2021-01-01",
+      "DateCompletion": "2021-12-31",
+      "PrixVente": 45000
+    },
+    {
+      "CommandeID": "H702",
+      "Libelle": "SPC – H702",
+      "Statut": "vendue",
+      "DateReception": "2021-12-31",
+      "DateCompletion": "2021-12-31",
+      "PrixVente": 28000
+    },
+    {
+      "CommandeID": "G901",
+      "Libelle": "SPC – G901",
+      "Statut": "terminee",
+      "DateReception": "2021-12-31",
+      "DateCompletion": "2021-12-31",
+      "PrixVente": 0
+    },
+    {
+      "CommandeID": "B168",
+      "Libelle": "SPC – B168",
+      "Statut": "en-cours",
+      "DateReception": "2021-12-31",
+      "DateCompletion": null,
+      "PrixVente": 0
+    }
+  ],
+  "Ouverture": [
+    {
+      "Date": "2021-01-01",
+      "CompteID": 1181,
+      "CommandeID": "L1670",
+      "Nature": "mp",
+      "Debit": 1500,
+      "Credit": 0
+    },
+    {
+      "Date": "2021-01-01",
+      "CompteID": 1181,
+      "CommandeID": "L1670",
+      "Nature": "mod",
+      "Debit": 6000,
+      "Credit": 0
+    },
+    {
+      "Date": "2021-01-01",
+      "CompteID": 1181,
+      "CommandeID": "L1670",
+      "Nature": "fgf",
+      "Debit": 8000,
+      "Credit": 0
+    },
+    {
+      "Date": "2021-01-01",
+      "CompteID": 1181,
+      "CommandeID": "J1901",
+      "Nature": "mp",
+      "Debit": 5000,
+      "Credit": 0
+    },
+    {
+      "Date": "2021-01-01",
+      "CompteID": 1181,
+      "CommandeID": "J1901",
+      "Nature": "mod",
+      "Debit": 8000,
+      "Credit": 0
+    },
+    {
+      "Date": "2021-01-01",
+      "CompteID": 1181,
+      "CommandeID": "J1901",
+      "Nature": "fgf",
+      "Debit": 4000,
+      "Credit": 0
+    },
+    {
+      "Date": "2021-01-01",
+      "CompteID": 3400,
+      "CommandeID": null,
+      "Nature": null,
+      "Debit": 0,
+      "Credit": 32500
+    }
+  ],
+  "Ecritures": [
+    {
+      "IDEcriture": "E0000",
+      "Date": "2021-12-31",
+      "Libelle": "Achat de MP",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1180, "CommandeID": null, "AtelierID": null, "Debit": 33522, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 2100, "CommandeID": null, "AtelierID": null, "Debit": 0, "Credit": 33522 }
+      ]
+    },
+    {
+      "IDEcriture": "E0001",
+      "Date": "2021-12-31",
+      "Libelle": "MP directes — H702",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1181, "CommandeID": "H702", "AtelierID": null, "Debit": 16872, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 1180, "CommandeID": null, "AtelierID": null, "Debit": 0, "Credit": 16872 }
+      ]
+    },
+    {
+      "IDEcriture": "E0002",
+      "Date": "2021-12-31",
+      "Libelle": "MP directes — G901",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1181, "CommandeID": "G901", "AtelierID": null, "Debit": 10980, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 1180, "CommandeID": null, "AtelierID": null, "Debit": 0, "Credit": 10980 }
+      ]
+    },
+    {
+      "IDEcriture": "E0003",
+      "Date": "2021-12-31",
+      "Libelle": "MP directes — B168",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1181, "CommandeID": "B168", "AtelierID": null, "Debit": 5670, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 1180, "CommandeID": null, "AtelierID": null, "Debit": 0, "Credit": 5670 }
+      ]
+    },
+    {
+      "IDEcriture": "E0004",
+      "Date": "2021-12-31",
+      "Libelle": "MOD — L1670",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1181, "CommandeID": "L1670", "AtelierID": null, "Debit": 800, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 2350, "CommandeID": null, "AtelierID": null, "Debit": 0, "Credit": 800 }
+      ]
+    },
+    {
+      "IDEcriture": "E0005",
+      "Date": "2021-12-31",
+      "Libelle": "MOD — J1901",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1181, "CommandeID": "J1901", "AtelierID": null, "Debit": 9600, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 2350, "CommandeID": null, "AtelierID": null, "Debit": 0, "Credit": 9600 }
+      ]
+    },
+    {
+      "IDEcriture": "E0006",
+      "Date": "2021-12-31",
+      "Libelle": "MOD — H702",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1181, "CommandeID": "H702", "AtelierID": null, "Debit": 1575, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 2350, "CommandeID": null, "AtelierID": null, "Debit": 0, "Credit": 1575 }
+      ]
+    },
+    {
+      "IDEcriture": "E0007",
+      "Date": "2021-12-31",
+      "Libelle": "MOD — G901",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1181, "CommandeID": "G901", "AtelierID": null, "Debit": 1200, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 2350, "CommandeID": null, "AtelierID": null, "Debit": 0, "Credit": 1200 }
+      ]
+    },
+    {
+      "IDEcriture": "E0008",
+      "Date": "2021-12-31",
+      "Libelle": "MOD — B168",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1181, "CommandeID": "B168", "AtelierID": null, "Debit": 180, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 2350, "CommandeID": null, "AtelierID": null, "Debit": 0, "Credit": 180 }
+      ]
+    },
+    {
+      "IDEcriture": "E0009",
+      "Date": "2021-12-31",
+      "Libelle": "FGF imputés",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1181, "CommandeID": "L1670", "AtelierID": null, "Debit": 400, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 1181, "CommandeID": "J1901", "AtelierID": null, "Debit": 6000, "Credit": 0 },
+        { "NoLigne": 3, "CompteID": 1181, "CommandeID": "H702", "AtelierID": null, "Debit": 1000, "Credit": 0 },
+        { "NoLigne": 4, "CompteID": 1181, "CommandeID": "G901", "AtelierID": null, "Debit": 1200, "Credit": 0 },
+        { "NoLigne": 5, "CompteID": 1181, "CommandeID": "B168", "AtelierID": null, "Debit": 180, "Credit": 0 },
+        { "NoLigne": 6, "CompteID": 9640, "CommandeID": null, "AtelierID": null, "Debit": 0, "Credit": 8780 }
+      ]
+    },
+    {
+      "IDEcriture": "E0010",
+      "Date": "2021-12-31",
+      "Libelle": "Transfert L1670 vers SPF",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1182, "CommandeID": "L1670", "AtelierID": null, "Debit": 16700, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 1181, "CommandeID": "L1670", "AtelierID": null, "Debit": 0, "Credit": 16700 }
+      ]
+    },
+    {
+      "IDEcriture": "E0011",
+      "Date": "2021-12-31",
+      "Libelle": "Transfert J1901 vers SPF",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1182, "CommandeID": "J1901", "AtelierID": null, "Debit": 32600, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 1181, "CommandeID": "J1901", "AtelierID": null, "Debit": 0, "Credit": 32600 }
+      ]
+    },
+    {
+      "IDEcriture": "E0012",
+      "Date": "2021-12-31",
+      "Libelle": "Transfert H702 vers SPF",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1182, "CommandeID": "H702", "AtelierID": null, "Debit": 19447, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 1181, "CommandeID": "H702", "AtelierID": null, "Debit": 0, "Credit": 19447 }
+      ]
+    },
+    {
+      "IDEcriture": "E0013",
+      "Date": "2021-12-31",
+      "Libelle": "Transfert G901 vers SPF",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1182, "CommandeID": "G901", "AtelierID": null, "Debit": 13380, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 1181, "CommandeID": "G901", "AtelierID": null, "Debit": 0, "Credit": 13380 }
+      ]
+    },
+    {
+      "IDEcriture": "E0014",
+      "Date": "2021-12-31",
+      "Libelle": "Vente L1670",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1100, "CommandeID": "L1670", "AtelierID": null, "Debit": 18000, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 4500, "CommandeID": null, "AtelierID": null, "Debit": 0, "Credit": 18000 }
+      ]
+    },
+    {
+      "IDEcriture": "E0015",
+      "Date": "2021-12-31",
+      "Libelle": "CPV — L1670",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 5000, "CommandeID": "L1670", "AtelierID": null, "Debit": 16700, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 1182, "CommandeID": "L1670", "AtelierID": null, "Debit": 0, "Credit": 16700 }
+      ]
+    },
+    {
+      "IDEcriture": "E0016",
+      "Date": "2021-12-31",
+      "Libelle": "Vente J1901",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1100, "CommandeID": "J1901", "AtelierID": null, "Debit": 45000, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 4500, "CommandeID": null, "AtelierID": null, "Debit": 0, "Credit": 45000 }
+      ]
+    },
+    {
+      "IDEcriture": "E0017",
+      "Date": "2021-12-31",
+      "Libelle": "CPV — J1901",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 5000, "CommandeID": "J1901", "AtelierID": null, "Debit": 32600, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 1182, "CommandeID": "J1901", "AtelierID": null, "Debit": 0, "Credit": 32600 }
+      ]
+    },
+    {
+      "IDEcriture": "E0018",
+      "Date": "2021-12-31",
+      "Libelle": "Vente H702",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 1100, "CommandeID": "H702", "AtelierID": null, "Debit": 28000, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 4500, "CommandeID": null, "AtelierID": null, "Debit": 0, "Credit": 28000 }
+      ]
+    },
+    {
+      "IDEcriture": "E0019",
+      "Date": "2021-12-31",
+      "Libelle": "CPV — H702",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 5000, "CommandeID": "H702", "AtelierID": null, "Debit": 19447, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 1182, "CommandeID": "H702", "AtelierID": null, "Debit": 0, "Credit": 19447 }
+      ]
+    },
+    {
+      "IDEcriture": "E0020",
+      "Date": "2021-12-31",
+      "Libelle": "Frais de vente et d'administration",
+      "Lignes": [
+        { "NoLigne": 1, "CompteID": 6200, "CommandeID": null, "AtelierID": null, "Debit": 25510, "Credit": 0 },
+        { "NoLigne": 2, "CompteID": 2100, "CommandeID": null, "AtelierID": null, "Debit": 0, "Credit": 25510 }
+      ]
+    }
+  ]
+}
