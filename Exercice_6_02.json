@@ -1,0 +1,396 @@
+{
+  "Meta": {
+    "Chapitre": 6,
+    "ExerciceID": "P6.02",
+    "Titre": "Métal unique ltée",
+    "Numero": "6.2",
+    "Cours": "410-409-BA",
+    "FinExercice": "1900-01-31",
+    "TypeExercice": "prix-revient-commande"
+  },
+  "Configuration": {
+    "Ateliers": [
+      {
+        "AtelierID": "DEC",
+        "Libelle": "Découpage",
+        "TauxImputation": 1.0,
+        "BaseImputation": "Coût de la MOD"
+      },
+      {
+        "AtelierID": "FIN",
+        "Libelle": "Finition",
+        "TauxImputation": 0.5,
+        "BaseImputation": "Coût de la MOD"
+      }
+    ]
+  },
+  "Affichage": {
+    "ComptesT": [
+      1010,
+      1180,
+      1181,
+      1182,
+      2100,
+      2350,
+      9640,
+      9645,
+      5000,
+      4500
+    ]
+  },
+  "Commandes": [
+    {
+      "CommandeID": "101",
+      "Libelle": "SPC – 101",
+      "Statut": "vendue",
+      "DateReception": "2026-01-17",
+      "DateCompletion": "2026-01-21",
+      "PrixVente": 7000
+    },
+    {
+      "CommandeID": "102",
+      "Libelle": "SPC – 102",
+      "Statut": "terminee",
+      "DateReception": "2026-01-17",
+      "DateCompletion": "2026-01-25",
+      "PrixVente": 3000
+    }
+  ],
+  "Ouverture": [],
+  "Ecritures": [
+    {
+      "IDEcriture": "E0001",
+      "Date": "2026-01-07",
+      "Libelle": "Achat d’aluminium et de détachant à crédit",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1180,
+          "CommandeID": null,
+          "AtelierID": null,
+          "Debit": 40000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 2100,
+          "CommandeID": null,
+          "AtelierID": null,
+          "Debit": 0,
+          "Credit": 40000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0002",
+      "Date": "2026-01-17",
+      "Libelle": "Utilisation d’aluminium direct",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1181,
+          "CommandeID": "101",
+          "AtelierID": "DEC",
+          "Debit": 1875,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1181,
+          "CommandeID": "102",
+          "AtelierID": "DEC",
+          "Debit": 225,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 3,
+          "CompteID": 1180,
+          "CommandeID": null,
+          "AtelierID": null,
+          "Debit": 0,
+          "Credit": 2100
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0003",
+      "Date": "2026-01-24",
+      "Libelle": "Utilisation de détachant indirect",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9645,
+          "CommandeID": null,
+          "AtelierID": "FIN",
+          "Debit": 50,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1180,
+          "CommandeID": null,
+          "AtelierID": null,
+          "Debit": 0,
+          "Credit": 50
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0004",
+      "Date": "2026-01-31",
+      "Libelle": "Coûts de main-d’œuvre engagés",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1181,
+          "CommandeID": "101",
+          "AtelierID": "DEC",
+          "Debit": 1550,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1181,
+          "CommandeID": "101",
+          "AtelierID": "FIN",
+          "Debit": 350,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 3,
+          "CompteID": 1181,
+          "CommandeID": "102",
+          "AtelierID": "DEC",
+          "Debit": 750,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 4,
+          "CompteID": 1181,
+          "CommandeID": "102",
+          "AtelierID": "FIN",
+          "Debit": 100,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 5,
+          "CompteID": 1181,
+          "CommandeID": "102",
+          "AtelierID": "FIN",
+          "Debit": 200,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 6,
+          "CompteID": 9645,
+          "CommandeID": null,
+          "AtelierID": "DEC",
+          "Debit": 550,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 7,
+          "CompteID": 9645,
+          "CommandeID": null,
+          "AtelierID": "FIN",
+          "Debit": 75,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 8,
+          "CompteID": 2350,
+          "CommandeID": null,
+          "AtelierID": null,
+          "Debit": 0,
+          "Credit": 3575
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0005",
+      "Date": "2026-01-31",
+      "Libelle": "FGF réels additionnels — découpage",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9645,
+          "CommandeID": null,
+          "AtelierID": "DEC",
+          "Debit": 1550,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 2100,
+          "CommandeID": null,
+          "AtelierID": null,
+          "Debit": 0,
+          "Credit": 1550
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0006",
+      "Date": "2026-01-25",
+      "Libelle": "Imputation des FGF aux commandes",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1181,
+          "CommandeID": "101",
+          "AtelierID": "DEC",
+          "Debit": 1550,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1181,
+          "CommandeID": "101",
+          "AtelierID": "FIN",
+          "Debit": 175,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 3,
+          "CompteID": 1181,
+          "CommandeID": "102",
+          "AtelierID": "DEC",
+          "Debit": 750,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 4,
+          "CompteID": 1181,
+          "CommandeID": "102",
+          "AtelierID": "FIN",
+          "Debit": 150,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 5,
+          "CompteID": 9640,
+          "CommandeID": null,
+          "AtelierID": null,
+          "Debit": 0,
+          "Credit": 2625
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0007",
+      "Date": "2026-01-25",
+      "Libelle": "Transfert des commandes terminées vers SPF",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1182,
+          "CommandeID": "101",
+          "AtelierID": null,
+          "Debit": 5500,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1182,
+          "CommandeID": "102",
+          "AtelierID": null,
+          "Debit": 2175,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 3,
+          "CompteID": 1181,
+          "CommandeID": "101",
+          "AtelierID": null,
+          "Debit": 0,
+          "Credit": 5500
+        },
+        {
+          "NoLigne": 4,
+          "CompteID": 1181,
+          "CommandeID": "102",
+          "AtelierID": null,
+          "Debit": 0,
+          "Credit": 2175
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0008",
+      "Date": "2026-01-25",
+      "Libelle": "Vente comptant de la commande 101",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 1010,
+          "CommandeID": "101",
+          "AtelierID": null,
+          "Debit": 7000,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 4500,
+          "CommandeID": "101",
+          "AtelierID": null,
+          "Debit": 0,
+          "Credit": 7000
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0009",
+      "Date": "2026-01-25",
+      "Libelle": "Coût des produits vendus — commande 101",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 5000,
+          "CommandeID": "101",
+          "AtelierID": null,
+          "Debit": 5500,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 1182,
+          "CommandeID": "101",
+          "AtelierID": null,
+          "Debit": 0,
+          "Credit": 5500
+        }
+      ]
+    },
+    {
+      "IDEcriture": "E0010",
+      "Date": "2026-01-31",
+      "Libelle": "Fermeture des FGF — surimputation",
+      "Lignes": [
+        {
+          "NoLigne": 1,
+          "CompteID": 9640,
+          "CommandeID": null,
+          "AtelierID": null,
+          "Debit": 2625,
+          "Credit": 0
+        },
+        {
+          "NoLigne": 2,
+          "CompteID": 9645,
+          "CommandeID": null,
+          "AtelierID": null,
+          "Debit": 0,
+          "Credit": 2225
+        },
+        {
+          "NoLigne": 3,
+          "CompteID": 1183,
+          "CommandeID": null,
+          "AtelierID": null,
+          "Debit": 0,
+          "Credit": 400
+        }
+      ]
+    }
+  ]
+}
