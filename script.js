@@ -946,6 +946,8 @@ function afficherBilan(bv, calculs) {
       return {
         Compte: ligne.Compte,
         Section: compte.Section,
+        SousSection: compte.SousSection || "",
+        SousSectionID: Number(compte.SousSectionID || 0),
         OrdreID: compte.OrdreID,
         Montant: soldeNet * Number(compte.Signe)
       };
@@ -956,6 +958,8 @@ function afficherBilan(bv, calculs) {
     lignesBilan.push({
       Compte: "Bénéfices de l'exercice",
       Section: "Capitaux propres",
+      SousSection: "Bénéfices non répartis",
+      SousSectionID: 3030,
       OrdreID: "10303476",
       Montant: calculs.resultatNetPourBilan
     });
@@ -972,7 +976,31 @@ function afficherBilan(bv, calculs) {
   const totalCapitaux = capitaux.reduce((s, ligne) => s + Number(ligne.Montant), 0);
   const totalPassifCapitaux = totalPassif + totalCapitaux;
 
+  function regrouperParSousSection(lignes) {
+    const groupes = {};
+
+    lignes.forEach(ligne => {
+      const cle = `${ligne.SousSectionID}||${ligne.SousSection}`;
+
+      if (!groupes[cle]) {
+        groupes[cle] = {
+          SousSectionID: ligne.SousSectionID,
+          SousSection: ligne.SousSection,
+          Lignes: [],
+          Total: 0
+        };
+      }
+
+      groupes[cle].Lignes.push(ligne);
+      groupes[cle].Total += Number(ligne.Montant);
+    });
+
+    return Object.values(groupes).sort((a, b) => a.SousSectionID - b.SousSectionID);
+  }
+
   function construireTableSection(titre, lignes, totalTitre, total) {
+    const groupes = regrouperParSousSection(lignes);
+
     let html = `
       <table>
         <tbody>
@@ -981,11 +1009,26 @@ function afficherBilan(bv, calculs) {
           </tr>
     `;
 
-    lignes.forEach(ligne => {
+    groupes.forEach(groupe => {
       html += `
-        <tr>
-          <td>${ligne.Compte}</td>
-          <td style="text-align:right">${formatMontant0(ligne.Montant)}</td>
+        <tr class="sous-section">
+          <th colspan="2" style="text-align:left">${groupe.SousSection}</th>
+        </tr>
+      `;
+
+      groupe.Lignes.forEach(ligne => {
+        html += `
+          <tr>
+            <td style="padding-left: 18px;">${ligne.Compte}</td>
+            <td style="text-align:right">${formatMontant0(ligne.Montant)}</td>
+          </tr>
+        `;
+      });
+
+      html += `
+        <tr class="total-sous-section">
+          <th style="text-align:left; padding-left: 18px;">Total ${groupe.SousSection.toLowerCase()}</th>
+          <th style="text-align:right">${formatMontant0(groupe.Total)}</th>
         </tr>
       `;
     });
