@@ -221,11 +221,27 @@
         },
         {
           "NoLigne": 2,
-          "CompteID": 2100,
+          "CompteID": 1010,
           "CommandeID": null,
           "AtelierID": null,
           "Debit": 0,
-          "Credit": 1550
+          "Credit": 1200
+        },
+        {
+          "NoLigne": 3,
+          "CompteID": 1305,
+          "CommandeID": null,
+          "AtelierID": null,
+          "Debit": 0,
+          "Credit": 150
+        },
+        {
+          "NoLigne": 4,
+          "CompteID": 2350,
+          "CommandeID": null,
+          "AtelierID": null,
+          "Debit": 0,
+          "Credit": 200
         }
       ]
     },
